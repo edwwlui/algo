@@ -11,6 +11,5 @@ for y in range(1,len(input_mat)):
         right=x+1
         if right>len(input_mat)-1:
             right=len(input_mat)-1
-        
         cost_mat[y][x]=input_mat[y][x]+min( cost_mat[y-1][left], cost_mat[y-1][x], cost_mat[y-1][right] )
 print(min(cost_mat[ len(input_mat)-1 ][i] for i in range(len(input_mat)) ))
